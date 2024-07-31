@@ -1,1 +1,130 @@
-/Users/nigeljose/.config/ohmyposh/posh-config.toml
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 2
+final_space = true
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+[[blocks.segments]]
+type = "text"
+style = "plain"
+foreground = "p:grey"
+background = "transparent"
+template = "\u256D\u2500"
+
+[[blocks.segments]]
+type = "path"
+style = "diamond"
+leading_diamond = "\uE0B6"
+trailing_diamond = "\uE0B0"
+foreground = "p:white"
+background = "p:plum"
+template = " \uf179 "
+
+[[blocks.segments]]
+type = "path"
+style = "diamond"
+trailing_diamond = "\uE0B0"
+foreground = "p:white"
+background = "p:blush"
+template = " {{ .Path }} "
+
+[blocks.segments.properties]
+style = "folder"
+
+[[blocks.segments]]
+type = "git"
+style = "diamond"
+trailing_diamond = "\uE0B0"
+foreground = "p:white"
+background = "p:salmon"
+template = " {{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .Ahead 0 }} \u2191{{.Ahead}}{{end}}{{ if gt .Behind 0 }} \u2193{{.Behind}}{{end}} {{ if gt .Working.Untracked 0}}+{{ .Working.Untracked }} {{end}}{{ if gt .Working.Modified 0}}~{{ .Working.Modified }} {{end}}{{ if gt .Working.Deleted 0}}-{{ .Working.Deleted }} {{end}}"
+
+[blocks.segments.properties]
+branch_icon = "\uE725 "
+cherry_pick_icon = "\u2713 "
+commit_icon = "\uF417 "
+fetch_status = true
+merge_icon = "\uF419 "
+no_commits_icon = "[no commits]"
+rebase_icon = "\u2C62 "
+tag_icon = "\uF02B "
+
+[[blocks.segments]]
+type = "python"
+style = "diamond"
+trailing_diamond = "\uE0B0"
+foreground = "p:grey"
+background = "p:lemon"
+template = " \ue235  {{ .Venv }} "
+
+[[blocks]]
+type = "prompt"
+alignment = "right"
+
+[[blocks.segments]]
+type = "text"
+style = "diamond"
+foreground = "p:white"
+background = "p:pear"
+leading_diamond = "\uE0B2"
+background_templates = ["{{ if eq .Code 0 }}p:pear{{ else }}p:cherry{{ end }}"]
+template = " {{ if eq .Code 0 }}✔{{ else }}✘ {{ .Code }}{{ end }} "
+
+[[blocks.segments]]
+type = "executiontime"
+style = "diamond"
+foreground = "p:white"
+background = "p:turquoise"
+leading_diamond = "\uE0B2"
+template = " \uf252  {{ .FormattedMs }} "
+
+[blocks.segments.properties]
+threshold = 3000
+style = "round"
+
+[[blocks.segments]]
+type = "time"
+style = "diamond"
+foreground = "p:white"
+background = "p:saphire"
+leading_diamond = "\uE0B2"
+trailing_diamond = "\uE0B4"
+template = " \uf43a  {{ .CurrentDate | date .Format }} "
+
+[blocks.segments.properties]
+time_format = "15:04:05"
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+[[blocks.segments]]
+type = "text"
+style = "plain"
+foreground = "p:grey"
+background = "transparent"
+template = "\u2570\u2500"
+
+[palette]
+blush = "#DA627D"
+plum = "#9A348E"
+salmon = "#FCA17D"
+lemon = "#FCE77D"
+saphire = "#33658A"
+white = "#FFFFFF"
+pear = "#83C26B"
+cherry = "#D64242"
+turquoise = "#249BA3"
+grey = "#808080"
+
+# Unused colors
+teal = "#047E84"
+sky = "#86BBD8"
+tan = "#CC3802"
+lime = "#D6FC7D"
+peach = "#D67E42"
