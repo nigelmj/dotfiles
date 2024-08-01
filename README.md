@@ -18,3 +18,16 @@ This prompt is similar to the original but is written in TOML format. It include
 ## Zed theme: One Dark Pro Flat
 Inspired by [One Dark Pro](https://github.com/Binaryify/OneDark-Pro) theme for VSCode  
 This is based on the Flat variation of the theme.
+
+## Installation
+
+1. Clone the repository and navigate to the directory:
+```sh
+git clone https://github.com/nigelmj/dotfiles
+cd dotfiles
+```
+
+2. Use GNU Stow to symlink the configuration files to the home directory:
+```sh
+stow -t ~ .
+```
