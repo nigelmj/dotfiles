@@ -3,9 +3,9 @@
 This repository contains the configuration files for my development environment.
 
 Contents:
-- [.zshrc](config/zsh/.zshrc): Configuration for the Zsh shell.
-- [Oh My Posh config](config/ohmyposh/posh-config.toml): Custom prompt settings for Oh My Posh.
-- [Zed theme](config/zed/themes/OneDarkProFlat.json): Theme configuration for the Zed editor.
+- [.zshrc](.zshrc): Configuration for the Zsh shell.
+- [Oh My Posh config](.config/ohmyposh/posh-config.toml): Custom prompt settings for Oh My Posh.
+- [Zed theme](.config/zed/themes/OneDarkProFlat.json): Theme configuration for the Zed editor.
 
 ## Zsh
 Credits: [dreamsofautonomy](https://github.com/dreamsofautonomy/zensh)  
