@@ -10,9 +10,9 @@ SPACE=(
   icon.padding_left=18
   icon.padding_right=18
   label.padding_right=33
-  icon.color=$WHITE
-  icon.font="$FONT:Bold:14.0"
-  icon.highlight_color=$BLUE
+  icon.color=$BLUE
+  icon.font="$FONT:Bold:16.0"
+  icon.highlight_color=$YELLOW
   icon.background.drawing=on
   background.padding_left=-8
   background.padding_right=-8
@@ -29,7 +29,6 @@ do
   sid=$(($i+1))
   sketchybar --add space space.$sid left
   sketchybar --set space.$sid associated_space=$sid
-  sketchybar --set space.$sid icon=${SPACE_ICONS[i]}
   sketchybar --set space.$sid "${SPACE[@]}"
 done
 

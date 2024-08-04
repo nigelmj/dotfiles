@@ -15,6 +15,6 @@ else
     esac
 fi
 
-sketchybar -m --animate tanh 20 \
+sketchybar -m --animate tanh 10 \
     --set $NAME icon=$ICON \
     --set $NAME label="$VOLUME%"

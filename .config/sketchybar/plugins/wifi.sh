@@ -1,27 +1,27 @@
 #!/usr/bin/env sh
 
-WI_FI_INFO=$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}')
+source "$HOME/.config/sketchybar/icons.sh"
 
-# Get the current Wi-Fi network
-CURRENT_NETWORK=$(echo "$WI_FI_INFO" | xargs networksetup -getairportnetwork | sed "s/Current Wi-Fi Network: //")
+SSID="$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}' | xargs networksetup -getairportnetwork | cut -d ':' -f 2- | xargs)"
+CURR_TX="$(wdutil info | grep "Tx Rate" | awk '{print int($4)}')"
+POPUP_OFF="sketchybar --set wifi.ssid popup.drawing=off && sketchybar --set wifi.speed popup.drawing=off"
+WIFI_INTERFACE=$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}')
+WIFI_POWER=$(networksetup -getairportpower $WIFI_INTERFACE | awk '{print $4}')
 
-# Check if the current network is associated with an airport network
-if echo "$CURRENT_NETWORK" | grep -q "You are not associated with an AirPort network"; then
-    LABEL="N/A"
+SSID_LOWER=$(echo "$SSID" | tr '[:upper:]' '[:lower:]')
+
+if [ "$WIFI_POWER" == "Off" ]; then
+  ICON=$WIFI_OFF
+
+elif [[ "$SSID_LOWER" == *iphone* ]]; then
+  ICON=$HOTSPOT
+
+elif [ "$CURR_TX" = 0 ]; then
+  ICON=$WIFI_NO_INTERNET
+
 else
-    # Truncate the current network name if longer than 10 characters
-    if [ "$(echo "$CURRENT_NETWORK" | awk '{ print length($1) }')" -gt 10 ]; then
-        label=$(echo "$CURRENT_NETWORK" | awk '{ print substr($0, 1, 7) }')
-        label=$(echo "$label" | sed 's/ *$//')
-        LABEL="$label"...
-    else
-        LABEL=$(echo "$CURRENT_NETWORK" | awk '{ printf "%s", $1 }')
-        # If there is a second word, print the first two characters followed by ...
-        if [ "$(echo "$CURRENT_NETWORK" | awk '{ print NF }')" -gt 1 ]; then
-            SECOND_WORD=$(echo "$CURRENT_NETWORK" | awk '{ printf "%s", substr($2, 1, 2) }')
-            LABEL="$LABEL $SECOND_WORD..."
-        fi
-    fi
+  ICON=$WIFI_ICON
+
 fi
 
-sketchybar --set "$NAME" label="$LABEL"
+sketchybar --set "$NAME" icon=$ICON

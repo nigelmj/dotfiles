@@ -1,8 +1,8 @@
 #!/bin/bash
 
 FRONT_APP=(
-  label.font="$FONT:ExtraBold:13.0"
-  icon.font="sketchybar-app-font:Regular:14.0" \
+  label.font="$FONT:ExtraBold:14.0"
+  icon.font="sketchybar-app-font:Regular:15.0" \
   icon.color=$BG_PRI_COLR
   label.color=$BG_PRI_COLR
   background.color=$SKY
