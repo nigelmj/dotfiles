@@ -10,4 +10,4 @@ TIME=(
 )
 
 sketchybar --add item time right \
-           --set time "${TIME[@]}"
+            --set time "${TIME[@]}"

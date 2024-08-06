@@ -7,5 +7,5 @@ VOLUME=(
 )
 
 sketchybar --add item volume right \
- --set volume "${VOLUME[@]}" \
- --subscribe volume volume_change
+            --set volume "${VOLUME[@]}" \
+            --subscribe volume volume_change
