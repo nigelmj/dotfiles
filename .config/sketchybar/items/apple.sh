@@ -3,7 +3,7 @@
 
 APPLE=(
   icon=$APPLE_ICON
-  icon.color=$WHITE
+  icon.color=$PURE_WHITE
   icon.padding_left=4
   label.drawing=off
   background.padding_left=0

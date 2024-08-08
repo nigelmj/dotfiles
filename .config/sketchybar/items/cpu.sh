@@ -4,9 +4,8 @@ CPU=(
   icon.font="$FONT:Regular:15.0"
   icon=􀫥
   icon.color=$PEACH
-  background.color=$BG_SEC_COLR
   script="$PLUGIN_DIR/cpu.sh"
 )
 
-sketchybar --add item cpu right \
+sketchybar --add item cpu left \
             --set cpu "${CPU[@]}"

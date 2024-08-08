@@ -2,7 +2,6 @@
 
 VOLUME=(
   icon.color=$RED
-  background.color=$BG_SEC_COLR
   script="$PLUGIN_DIR/volume.sh"
 )
 

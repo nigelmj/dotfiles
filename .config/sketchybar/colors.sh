@@ -10,11 +10,12 @@ export PEACH=0xFFfab387 #fab387
 export YELLOW=0xFFf7ee6d #f7ee6d
 export GREEN=0xFFa6e3a1 #a6e3a1
 export TEAL=0xFF94e2d5 #94e2d5
-export SKY=0xFFa2bbdb #a2bbdb
+export SKY=0xFFb6cffa #b6cffa
 export SAPPHIRE=0xFF74c7ec #74c7ec
 export BLUE=0xFF89b4fa #89b4fa
 export LAVENDER=0xFFb4befe #b4befe
 
+export PURE_WHITE=0xFFffffff #ffffff
 export WHITE=0xFFcccfdb #cccfdb
 export DARK_WHITE=0xFF9399b2  #9399b2
 
