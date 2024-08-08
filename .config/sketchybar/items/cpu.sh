@@ -1,6 +1,6 @@
 #!/bin/bash
 CPU=(
-  update_freq=2
+  update_freq=15
   icon.font="$FONT:Regular:15.0"
   icon=􀫥
   icon.color=$PEACH

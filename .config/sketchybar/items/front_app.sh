@@ -3,8 +3,8 @@
 FRONT_APP=(
   label.font="$FONT:ExtraBold:14.0"
   icon.font="sketchybar-app-font:Regular:15.0" \
-  icon.color=$WHITE \
-  label.color=$SKY \
+  icon.color=$SAPPHIRE \
+  label.color=$WHITE \
   script="$PLUGIN_DIR/front_app.sh"
 )
 
