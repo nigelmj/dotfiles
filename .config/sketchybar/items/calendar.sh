@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CALENDAR=(
-  updates=10
+  update_freq=10
   icon.drawing=off
   label.padding_left=10
   label.padding_right=6
