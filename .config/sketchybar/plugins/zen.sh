@@ -24,12 +24,12 @@ zen_off() {
              --set space_separator icon.color="$DARK_WHITE" \
              --set front_app icon.color="$SAPPHIRE" label.color="$WHITE" \
              --set front_app_separator icon.color="$DARK_WHITE" \
-             --animate tanh 30 \
+             --animate tanh 20 \
              --set cpu icon.color="$PEACH" label.color="$WHITE" \
              --set ram icon.color="$MAUVE" label.color="$WHITE" \
-             --animate tanh 50 \
-             --set shrug y_offset=0 \
              --animate tanh 30 \
+             --set shrug y_offset=0 \
+             --animate tanh 20 \
              --set volume icon.color="$RED" label.color="$WHITE" \
              --set wifi icon.color="$TEAL" label.color="$WHITE" \
              --animate tanh 10 \

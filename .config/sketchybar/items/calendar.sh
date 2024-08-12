@@ -1,6 +1,7 @@
 #!/bin/bash
 
 CALENDAR=(
+  updates=10
   icon.drawing=off
   label.padding_left=10
   label.padding_right=6
@@ -10,5 +11,4 @@ CALENDAR=(
 )
 
 sketchybar --add item calendar right \
-            --set calendar "${CALENDAR[@]}" \
-            --subscribe calendar system_woke
+            --set calendar "${CALENDAR[@]}"
