@@ -49,13 +49,13 @@ source "$ITEM_DIR/cpu.sh"
 source "$ITEM_DIR/ram.sh"
 
 # -- RIGHT Side Items --
-source "$ITEM_DIR/time.sh"
+source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/volume.sh"
 
-sketchybar --add item cat center \
-           --set cat icon="¯\_(ツ)_/¯"\
+sketchybar --add item shrug center \
+           --set shrug icon="¯\_(ツ)_/¯"\
                      icon.font="$FONT:ExtraBold:14.0" \
                      icon.color=$DARK_WHITE\
                      label.drawing=off

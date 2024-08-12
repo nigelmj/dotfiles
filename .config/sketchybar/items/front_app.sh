@@ -12,8 +12,8 @@ sketchybar --add item front_app left \
             --set front_app "${FRONT_APP[@]}" \
             --subscribe front_app front_app_switched
 
-sketchybar --add item front_app_separator_left left \
-            --set front_app_separator_left icon= \
+sketchybar --add item front_app_separator left \
+            --set front_app_separator icon= \
                     icon.font="$FONT:Bold:12.0" \
                     background.padding_left=0 \
                     background.padding_right=0 \
