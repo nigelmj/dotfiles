@@ -3,10 +3,10 @@
 This repository contains the configuration files for my development environment.
 
 Contents:
-- [.zshrc](.zshrc): Configuration for the Zsh shell.
-- [Oh My Posh](.config/ohmyposh/posh-config.toml): Custom prompt settings for Oh My Posh.
-- [Zed](.config/zed): Settings and theme configurations for the Zed editor.
-- [SketchyBar](.config/sketchybar): Custom menu bar
+- .zshrc: Configuration for the Zsh shell.
+- [Zed](https://github.com/zed-industries/zed): Code editor built in Rust.
+- [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh): Custom shell prompt.
+- [SketchyBar](https://github.com/FelixKratz/SketchyBar): Custom menu bar for macOS.
 
 ## Zsh
 Credits: [dreamsofautonomy](https://github.com/dreamsofautonomy/zensh)  
@@ -22,13 +22,18 @@ This is based on the Flat variation of the theme.
 
 ## Installation
 
-1. Clone the repository and navigate to the directory:
+1. Install [GNU Stow](https://www.gnu.org/software/stow/) using Homebrew (macOS):
+```sh
+brew install stow
+```
+
+2. Clone the repository and navigate to the directory:
 ```sh
 git clone https://github.com/nigelmj/dotfiles
 cd dotfiles
 ```
 
-2. Use GNU Stow to symlink the configuration files to the home directory:
+3. Use GNU Stow to symlink the configuration files to the home directory:
 ```sh
 stow -t ~ .
 ```
