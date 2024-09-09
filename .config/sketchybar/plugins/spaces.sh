@@ -9,4 +9,4 @@ fi
 
 sketchybar --animate tanh 10 --set $NAME \
 icon=$ICON \
-icon.highlight=$SELECTED \
+icon.highlight=$SELECTED

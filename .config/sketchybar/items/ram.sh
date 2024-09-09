@@ -10,4 +10,4 @@ RAM=(
 )
 
 sketchybar --add item ram left \
-            --set ram "${RAM[@]}"
+  --set ram "${RAM[@]}"

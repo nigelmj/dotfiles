@@ -32,4 +32,4 @@ fi
 WIFI_NAME=$(echo "$WIFI_NAME" | awk '{print substr($0, 1, 13)}')
 
 sketchybar --set "$NAME" icon=$ICON icon.padding_right=$PADDING \
-            --set "$NAME" label="$WIFI_NAME"
+  --set "$NAME" label="$WIFI_NAME"

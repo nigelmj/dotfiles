@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 APPLE=(
@@ -12,4 +11,4 @@ APPLE=(
 )
 
 sketchybar --add item apple left \
-            --set apple "${APPLE[@]}"
+  --set apple "${APPLE[@]}"

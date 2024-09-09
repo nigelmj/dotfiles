@@ -21,8 +21,8 @@ BAR_PROPS=(
   padding_right=15
   padding_left=15
   corner_radius=10
-  y_offset=4
-  margin=4
+  y_offset=7
+  margin=6
   notch_width=0
 )
 
@@ -54,11 +54,9 @@ source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/volume.sh"
 
-sketchybar --add item shrug center \
-           --set shrug icon="¯\_(ツ)_/¯"\
-                     icon.font="$FONT:ExtraBold:14.0" \
-                     icon.color=$DARK_WHITE\
-                     label.drawing=off
+source "$ITEM_DIR/kaomoji.sh"
+source "$ITEM_DIR/spotify.sh"
 
+sketchybar --hotload on
 
 sketchybar --update

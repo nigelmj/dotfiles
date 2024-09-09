@@ -16,5 +16,5 @@ else
 fi
 
 sketchybar -m --animate tanh 10 \
-    --set $NAME icon=$ICON \
-    --set $NAME label="$VOLUME%"
+  --set $NAME icon=$ICON \
+  --set $NAME label="$VOLUME%"
