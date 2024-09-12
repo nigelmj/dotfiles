@@ -1,4 +1,5 @@
 #!/bin/zsh
+set -e
 
 # Install xCode cli tools
 echo "Installing commandline tools..."
@@ -47,23 +48,27 @@ brew install --cask spotify
 # macOS settings
 echo "Setting macOS defaults..."
 osascript -e 'tell application "System Preferences" to quit'
-defaults write com.apple.dock "autohide" -bool "true"
-defaults write com.apple.dock "mru-spaces" -bool "false"
-defaults write com.apple.dock "show-recents" -bool "false"
-defaults write com.apple.dock "magnification" -bool "false"
-defaults write com.apple.screencapture "location" -string "$HOME/Pictures/Screenshots"
-defaults write com.apple.screencapture "disable-shadow" -bool "true"
-defaults write com.apple.finder "ShowPathbar" -bool "true"
-defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
-defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
-defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf"
-defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "true"
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-defaults write NSGlobalDomain "_HIHideMenuBar" -bool "true"
-defaults write NSGlobalDomain "AppleSpacesSwitchOnActivate"
-defaults write com.apple.LaunchServices "LSQuarantine" -bool "false"
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock 'mru-spaces' -bool false
+defaults write com.apple.dock 'show-recents' -bool false
+defaults write com.apple.dock magnification -bool false
+defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
+defaults write com.apple.screencapture 'disable-shadow' -bool true
+defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder '_FXSortFoldersFirst' -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder FXDefaultSearchScope -string 'SCcf'
+defaults write com.apple.finder '_FXSortFoldersFirstOnDesktop' -bool true
+defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool false
 
-source $HOME/.zshrc
+# Restart Finder and Dock to apply changes
+killall Dock
+killall Finder
+
+# Plant the config files
+echo "Planting the config files..."
+stow -t ~ .
+source "$HOME/.zshrc"
 
 # Start services
 echo "Starting services (grant permissions)..."

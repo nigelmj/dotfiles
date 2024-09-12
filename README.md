@@ -22,8 +22,3 @@ cd dotfiles
 ```sh
 ./install.sh
 ```
-
-3. Use GNU Stow to symlink the configuration files to the home directory:
-```sh
-stow -t ~ .
-```
