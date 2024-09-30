@@ -4,6 +4,7 @@ source "$HOME/.config/sketchybar/colors.sh"
 
 zen_on() {
   sketchybar -m --animate tanh 30 \
+    --set apple icon="" background.padding_right=0 \
     --set space_separator icon.color="$BG_PRI_COLR" \
     --set front_app icon.color="$BG_PRI_COLR" label.color="$BG_PRI_COLR" \
     --set front_app_separator icon.color="$BG_PRI_COLR" \
@@ -13,7 +14,7 @@ zen_on() {
     --animate tanh 10 \
     --set kaomoji y_offset=25 \
     --animate tanh 10 \
-    --set media y_offset=25 \
+    --set spotify y_offset=25 \
     --animate tanh 20 \
     --set volume icon.color="$BG_PRI_COLR" label.color="$BG_PRI_COLR" \
     --set wifi icon.color="$BG_PRI_COLR" label.color="$BG_PRI_COLR" \
@@ -22,7 +23,9 @@ zen_on() {
 }
 
 zen_off() {
-  sketchybar -m --animate tanh 10 \
+  sketchybar -m --animate tanh 20 \
+    --set apple icon="􀣺" background.padding_right=22 \
+    --animate tanh 10 \
     --set space_separator icon.color="$DARK_WHITE" \
     --set front_app icon.color="$SAPPHIRE" label.color="$WHITE" \
     --set front_app_separator icon.color="$DARK_WHITE" \
@@ -32,7 +35,7 @@ zen_off() {
     --animate tanh 30 \
     --set kaomoji y_offset=0 \
     --animate tanh 30 \
-    --set media y_offset=0 \
+    --set spotify y_offset=0 \
     --animate tanh 20 \
     --set volume icon.color="$PINK" label.color="$WHITE" \
     --set wifi icon.color="$TEAL" label.color="$WHITE" \

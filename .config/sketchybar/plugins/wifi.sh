@@ -2,9 +2,7 @@
 
 source "$HOME/.config/sketchybar/icons.sh"
 
-SSID="$(networksetup -getairportnetwork en0 | awk -F ': ' '{print $2}')"
-CURR_TX="$(wdutil info | grep "Tx Rate" | awk '{print int($4)}')"
-POPUP_OFF="sketchybar --set wifi.ssid popup.drawing=off && sketchybar --set wifi.speed popup.drawing=off"
+SSID="$(ipconfig getsummary en0 | awk -F ' SSID : '  '/ SSID : / {print $2}')"
 WIFI_INTERFACE=$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}')
 WIFI_POWER=$(networksetup -getairportpower $WIFI_INTERFACE | awk '{print $4}')
 
@@ -31,5 +29,5 @@ fi
 
 WIFI_NAME=$(echo "$WIFI_NAME" | awk '{print substr($0, 1, 13)}')
 
-sketchybar --set "$NAME" icon=$ICON icon.padding_right=$PADDING \
+sketchybar --animate tanh 20 --set "$NAME" icon=$ICON icon.padding_right=$PADDING \
   --set "$NAME" label="$WIFI_NAME"

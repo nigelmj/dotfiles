@@ -10,9 +10,9 @@ update ()
     ALBUM=$(osascript -e 'tell application "Spotify" to album of current track as string')
 
     if [ "$ARTIST" == "" ]; then
-      LABEL="$TRACK - $ALBUM"
+      LABEL="􀊱 $TRACK - $ALBUM"
     else
-      LABEL="$TRACK - $ARTIST"
+      LABEL="􀑪 $TRACK - $ARTIST"
     fi
   else
     LABEL=""

@@ -21,8 +21,8 @@ BAR_PROPS=(
   padding_right=15
   padding_left=15
   corner_radius=10
-  y_offset=7
-  margin=7
+  y_offset=8
+  margin=10
   notch_width=0
 )
 
