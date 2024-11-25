@@ -10,15 +10,17 @@ update ()
     ALBUM=$(osascript -e 'tell application "Spotify" to album of current track as string')
 
     if [ "$ARTIST" == "" ]; then
-      LABEL="􀊱 $TRACK - $ALBUM"
+      ICON="􀊱"
+      LABEL="$TRACK - $ALBUM"
     else
-      LABEL="􀑪 $TRACK - $ARTIST"
+      ICON="􀑪"
+      LABEL="$TRACK - $ARTIST"
     fi
   else
     LABEL=""
   fi
 
-  sketchybar --animate tanh 30 --set $NAME label="$LABEL"
+  sketchybar --animate tanh 30 --set $NAME icon="$ICON" label="$LABEL"
 }
 
 case "$SENDER" in

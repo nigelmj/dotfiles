@@ -27,7 +27,7 @@ elif [ "$SSID" = "" ]; then
 
 fi
 
-WIFI_NAME=$(echo "$WIFI_NAME" | awk '{print substr($0, 1, 13)}')
+WIFI_NAME=$(echo "$WIFI_NAME" | awk '{print substr($0, 1, 16)}')
 
 sketchybar --animate tanh 20 --set "$NAME" icon=$ICON icon.padding_right=$PADDING \
   --set "$NAME" label="$WIFI_NAME"

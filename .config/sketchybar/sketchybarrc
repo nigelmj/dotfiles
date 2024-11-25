@@ -45,8 +45,7 @@ sketchybar --default "${DEF_PROPS[@]}"
 source "$ITEM_DIR/apple.sh"
 source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/front_app.sh"
-source "$ITEM_DIR/cpu.sh"
-source "$ITEM_DIR/ram.sh"
+source "$ITEM_DIR/activity_monitor.sh"
 
 # -- RIGHT Side Items --
 source "$ITEM_DIR/calendar.sh"

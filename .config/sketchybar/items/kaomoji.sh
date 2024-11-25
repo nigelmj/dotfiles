@@ -18,5 +18,4 @@ kaomoji=(
 sketchybar --add event spotify_change $SPOTIFY_EVENT \
   --add item kaomoji center \
   --set kaomoji "${kaomoji[@]}" \
-  --subscribe kaomoji spotify_change \
-  --subscribe kaomoji mouse.entered mouse.exited
+  --subscribe kaomoji spotify_change mouse.entered mouse.exited
