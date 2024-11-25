@@ -16,7 +16,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Load oh-my-posh if not in Apple Terminal
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/posh-config.toml)"
+  eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config2.toml)"
 fi
 
 zinit light zsh-users/zsh-completions
@@ -61,7 +61,7 @@ else
 fi'
 
 # Aliases
-alias ls="eza --group-directories-first --icons"
+alias ls="eza --group-directories-first"
 alias la="ls -a"
 
 # Shell integrations

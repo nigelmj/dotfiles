@@ -2,6 +2,7 @@
 
 version = 2
 final_space = true
+auto_upgrade = true
 
 [[blocks]]
 type = "prompt"
@@ -72,7 +73,7 @@ foreground = "p:white"
 background = "p:pear"
 leading_diamond = "\uE0B2"
 background_templates = ["{{ if eq .Code 0 }}p:pear{{ else }}p:cherry{{ end }}"]
-template = " {{ if eq .Code 0 }}✔{{ else }}✘ {{ .Code }}{{ end }} "
+template = " {{ if eq .Code 0 }}\u2714{{ else }}\u2718 {{ .Code }}{{ end }} "
 
 [[blocks.segments]]
 type = "executiontime"
