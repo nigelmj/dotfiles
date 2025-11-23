@@ -2,7 +2,7 @@
 
 source "$HOME/.config/sketchybar/icons.sh"
 
-SSID="$(ipconfig getsummary en0 | awk -F ' SSID : '  '/ SSID : / {print $2}')"
+SSID="$(system_profiler SPAirPortDataType | awk '/Current Network/ {getline;$1=$1; gsub(":",""); print;exit}')"
 WIFI_INTERFACE=$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}')
 WIFI_POWER=$(networksetup -getairportpower $WIFI_INTERFACE | awk '{print $4}')
 
@@ -26,8 +26,6 @@ elif [ "$SSID" = "" ]; then
   WIFI_NAME="Not Connected"
 
 fi
-
-WIFI_NAME=$(echo "$WIFI_NAME" | awk '{print substr($0, 1, 16)}')
 
 sketchybar --animate tanh 20 --set "$NAME" icon=$ICON icon.padding_right=$PADDING \
   --set "$NAME" label="$WIFI_NAME"

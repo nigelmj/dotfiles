@@ -23,7 +23,7 @@ BAR_PROPS=(
   corner_radius=10
   y_offset=8
   margin=10
-  notch_width=0
+  notch_width=200
 )
 
 DEF_PROPS=(
@@ -47,14 +47,16 @@ source "$ITEM_DIR/spaces.sh"
 source "$ITEM_DIR/front_app.sh"
 source "$ITEM_DIR/activity_monitor.sh"
 
+# -- CENTRE Side Items --
+# source "$ITEM_DIR/kaomoji.sh"
+# source "$ITEM_DIR/spotify.sh"
+
 # -- RIGHT Side Items --
 source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/volume.sh"
 
-source "$ITEM_DIR/kaomoji.sh"
-source "$ITEM_DIR/spotify.sh"
 
 sketchybar --hotload on
 

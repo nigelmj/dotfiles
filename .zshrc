@@ -1,7 +1,3 @@
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -52,13 +48,6 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:*:*' fzf-preview 'if [[ -f $realpath ]]; then
-    bat --color=always --style=numbers --line-range=:500 "$realpath" 2>/dev/null
-elif [[ -d $realpath ]]; then
-    ls -1 --color=always "$realpath"
-else
-    echo "Not a file or directory"
-fi'
 
 # Aliases
 alias ls="eza --group-directories-first"
